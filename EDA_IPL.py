@@ -40,14 +40,14 @@ toss_decision_stats, win_margin_stats = factors_contributing_wins(matches)
 
 # Visualization
 # Win percentage plot
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(8, 4))
 sns.barplot(x='Team', y='Win_Percentage', data=team_stats)
 plt.xticks(rotation=90)
 plt.title('Team Win Percentage')
 plt.show()
 
 # Plot of top 10 players
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(8, 4))
 sns.barplot(x='player_of_match', y='Awards', data=player_stats.head(10))
 plt.xticks(rotation=90)
 plt.title('Top 10 Players with Most Player of the Match Awards')
