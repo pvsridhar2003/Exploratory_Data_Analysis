@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the datasets
-deliveries = pd.read_csv('D:/Internship/GRIP/deliveries.csv')
-matches = pd.read_csv('D:/Internship/GRIP/matches.csv')
+deliveries = pd.read_csv('.../deliveries.csv')
+matches = pd.read_csv('.../matches.csv')
 
 # Function to calculate team performance
 def team_performance(df):
