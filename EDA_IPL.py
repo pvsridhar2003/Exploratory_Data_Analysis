@@ -1,3 +1,4 @@
+# Required libraries
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -38,29 +39,39 @@ def factors_contributing_wins(df):
 toss_decision_stats, win_margin_stats = factors_contributing_wins(matches)
 
 # Visualization
+# Win percentage plot
 plt.figure(figsize=(12, 6))
 sns.barplot(x='Team', y='Win_Percentage', data=team_stats)
 plt.xticks(rotation=90)
 plt.title('Team Win Percentage')
 plt.show()
 
+# Plot of top 10 players
 plt.figure(figsize=(12, 6))
 sns.barplot(x='player_of_match', y='Awards', data=player_stats.head(10))
 plt.xticks(rotation=90)
 plt.title('Top 10 Players with Most Player of the Match Awards')
 plt.show()
 
+# Plot on the impact of toss decision
 plt.figure(figsize=(6, 4))
 sns.barplot(x='toss_decision', y='toss_win_match_win', data=toss_decision_stats)
 plt.title('Impact of Toss Decision on Match Win')
 plt.show()
 
+# Team performance statistics
 print("Team Performance:")
 print(team_stats)
+
+# Player performance statistics
 print("\nPlayer Performance:")
 print(player_stats.head(10))
+
+# Toss decision impact
 print("\nToss Decision Impact:")
 print(toss_decision_stats)
+
+# Win margin statistics
 print("\nWin Margin Statistics:")
 print(win_margin_stats)
 
